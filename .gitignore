@@ -69,6 +69,7 @@ resources/translations/*
 build/
 bindings/
 bindingsbefore/
+geode_doc/
 
 # CLion
 /cmake-*/
