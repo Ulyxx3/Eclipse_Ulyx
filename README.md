@@ -8,16 +8,16 @@
    </p>
 </div>
 <div align="center">
-    <a href="https://github.com/EclipseMenu/EclipseMenu/latest">
-          <img src="https://img.shields.io/github/v/release/EclipseMenu/EclipseMenu" alt="Release version">
+    <a href="https://github.com/Ulyxx3/Eclipse_Ulyx/latest">
+          <img src="https://img.shields.io/github/v/release/Ulyxx3/Eclipse_Ulyx" alt="Release version">
     </a>
-    <img src="https://img.shields.io/github/downloads/EclipseMenu/EclipseMenu/total" alt="Total downloads">
-    <img src="https://img.shields.io/github/downloads/EclipseMenu/EclipseMenu/latest/total" alt="Latest release downloads">
+    <img src="https://img.shields.io/github/downloads/Ulyxx3/Eclipse_Ulyx/total" alt="Total downloads">
+    <img src="https://img.shields.io/github/downloads/Ulyxx3/Eclipse_Ulyx/latest/total" alt="Latest release downloads">
     <a href="LICENSE.md">
-      <img src="https://img.shields.io/github/license/EclipseMenu/EclipseMenu" alt="License">
+      <img src="https://img.shields.io/github/license/Ulyxx3/Eclipse_Ulyx" alt="License">
     </a>
-    <a href="https://github.com/EclipseMenu/EclipseMenu/issues">
-      <img src="https://img.shields.io/github/issues/EclipseMenu/EclipseMenu" alt="Issues">
+    <a href="https://github.com/Ulyxx3/Eclipse_Ulyx/issues">
+      <img src="https://img.shields.io/github/issues/Ulyxx3/Eclipse_Ulyx" alt="Issues">
     </a>
     <a href="https://discord.gg/NnpwFRDMND">
       <img src="https://img.shields.io/discord/1256092297829945414?label=discord&logo=discord" alt="Discord">
@@ -63,12 +63,12 @@
 - StartPos Switcher (with Smart SmartPos!)
 - Fully Customizable Labels
 - Show Trajectory
-- Internal Recorder (requires [FFmpeg API](https://geode-sdk.org/mods/eclipse.ffmpeg-api) mod to be installed)
+- Internal Recorder (requires [FFmpeg API](https://git.eclipse.menu/EclipseMenu/ffmpeg-api) mod to be installed)
 - Replay Bot
 - Keybinds
 - Theme Customizability (you can theme Eclipse Menu however you want!)
 - Crossplatform support (Windows, macOS, Android, iOS)
-- Community Translations (check the [translations repository](https://github.com/EclipseMenu/translations) on how to
+- Community Translations (check the [translations repository](https://git.eclipse.menu/EclipseMenu/translations) on how to
   contribute)
 - An API for other mods to interact with Eclipse
 
