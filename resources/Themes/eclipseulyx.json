@@ -1,0 +1,54 @@
+{
+    "blur": {
+        "blurEnabled": true,
+        "blurRadius": 1.0,
+        "blurSpeed": 0.3
+    },
+    "colors": {
+        "backgroundColor": "10121CE8",
+        "borderColor": "3B4261FF",
+        "buttonActivatedColor": "5B4FE8FF",
+        "buttonActiveForeground": "FFFFFFFF",
+        "buttonBackgroundColor": "262B40E0",
+        "buttonDisabledColor": "3B4058A0",
+        "buttonDisabledForeground": "8E96B8FF",
+        "buttonForegroundColor": "E6E9F5FF",
+        "buttonHoveredColor": "7267F0FF",
+        "buttonHoveredForeground": "FFFFFFFF",
+        "checkboxBackgroundColor": "1E2233F0",
+        "checkboxCheckmarkColor": "38D9F5FF",
+        "checkboxForegroundColor": "E6E9F5FF",
+        "disabledColor": "7D85A8FF",
+        "foregroundColor": "E6E9F5FF",
+        "frameBackground": "1A1D2CE8",
+        "searchedColor": "38D9F5FF",
+        "titleBackgroundColor": "2A265CEB",
+        "titleForegroundColor": "FFFFFFFF"
+    },
+    "details": {
+        "author": "Ulyxx3",
+        "description": "Default cosmic indigo & cyan theme for Eclipse Ulyx",
+        "layout": 0,
+        "name": "Eclipse Ulyx",
+        "renderer": 0,
+        "schema": 1,
+        "style": 4
+    },
+    "other": {
+        "borderSize": 0.5,
+        "font": "Poppins",
+        "fontSize": 18.0,
+        "framePadding": 3.0,
+        "frameRounding": 4.0,
+        "horizontalInnerSpacing": 8.0,
+        "horizontalSpacing": 12.0,
+        "indentSpacing": 25.0,
+        "uiScale": 1.0,
+        "verticalInnerSpacing": 6.0,
+        "verticalSpacing": 3.0,
+        "windowMargin": 4.0,
+        "windowPadding": 6.0,
+        "windowRounding": 5.0
+    }
+}
+

@@ -12,7 +12,7 @@ else()
 endif()
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
-project(EclipseMenu VERSION 1.0.0 LANGUAGES CXX)
+project(EclipseUlyx VERSION 1.0.0 LANGUAGES CXX)
 
 # Sources
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)

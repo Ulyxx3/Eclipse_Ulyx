@@ -3,14 +3,37 @@
 #include <modules/utils/SingletonCache.hpp>
 
 #include <Geode/Geode.hpp>
+#include <Geode/loader/GameEvent.hpp>
 #include <Geode/modify/CCScene.hpp>
+#include <Geode/ui/OverlayManager.hpp>
 using namespace cocos2d;
 
 namespace eclipse::gui {
+    static bool s_floatingButtonInitialized = false;
+
     FloatingButton* FloatingButton::get() {
-        static FloatingButton* instance = create();
+        static FloatingButton* instance = [] {
+            auto* ret = create();
+            if (ret) {
+                ret->retain();
+                s_floatingButtonInitialized = true;
+            }
+            return ret;
+        }();
         return instance;
     }
+
+    #ifdef ECLIPSE_USE_FLOATING_BUTTON
+    $on_game(TexturesLoaded) {
+        if (!s_floatingButtonInitialized) return;
+        auto* btn = FloatingButton::get();
+        if (!btn) return;
+        if (!btn->getParent()) {
+            geode::OverlayManager::get()->addChild(btn);
+        }
+        btn->reloadSprite();
+    }
+    #endif
 
     void FloatingButton::setCallback(Function<void()>&& callback) {
         m_callback = std::move(callback);

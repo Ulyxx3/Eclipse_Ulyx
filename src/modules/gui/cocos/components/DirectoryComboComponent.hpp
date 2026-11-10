@@ -98,7 +98,9 @@ namespace eclipse::gui::cocos {
             }
 
             auto value = m_component->getValue();
-            m_index = std::ranges::find(items, value) - items.begin();
+            m_index = std::ranges::find_if(items, [&](auto const& item) {
+                return item.view() == value;
+            }) - items.begin();
 
             updateLabel();
 

@@ -59,7 +59,7 @@ namespace eclipse::gui::imgui {
             ImGui::SameLine();
 
             ImGui::SetCursorPosY(11);
-            ImGui::TextUnformatted("Eclipse Menu");
+            ImGui::TextUnformatted("Eclipse Ulyx");
 
             ImGui::EndChild();
 

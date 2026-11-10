@@ -1,6 +1,9 @@
 #pragma once
 #include "modules/utils/SingletonCache.hpp"
 #include <Geode/binding/PlayerObject.hpp>
+#include <array>
+#include <cstddef>
+#include <cstring>
 
 using namespace geode::prelude;
 
@@ -21,7 +24,13 @@ namespace eclipse::utils {
             m_unk3380 = playLayer->m_unk3380;
 
             #ifndef GEODE_IS_ANDROID
-            m_gameObjectPhysics = playLayer->m_gameState.m_gameObjectPhysics;
+            auto const& srcPhysics = playLayer->m_gameState.m_gameObjectPhysics;
+            m_gameObjectPhysics.reserve(srcPhysics.size());
+            for (auto const& [id, physics] : srcPhysics) {
+                RawGameObjectPhysics raw{};
+                std::memcpy(raw.bytes.data(), static_cast<void const*>(&physics), sizeof(GameObjectPhysics));
+                m_gameObjectPhysics.emplace(id, raw);
+            }
             #endif
         }
 
@@ -38,7 +47,13 @@ namespace eclipse::utils {
             playLayer->m_unk3380 = m_unk3380;
 
             #ifndef GEODE_IS_ANDROID
-            playLayer->m_gameState.m_gameObjectPhysics = m_gameObjectPhysics;
+            auto& dstPhysics = playLayer->m_gameState.m_gameObjectPhysics;
+            dstPhysics.clear();
+            dstPhysics.reserve(m_gameObjectPhysics.size());
+            for (auto const& [id, raw] : m_gameObjectPhysics) {
+                auto& dst = dstPhysics[id];
+                std::memcpy(static_cast<void*>(&dst), raw.bytes.data(), sizeof(GameObjectPhysics));
+            }
             #endif
         }
 
@@ -54,8 +69,12 @@ namespace eclipse::utils {
         float m_unk3380;
 
         #ifndef GEODE_IS_ANDROID
-        //GameState
-        std::unordered_map<int, GameObjectPhysics> m_gameObjectPhysics;
+        // Store raw bytes because GameObjectPhysics has anonymous unions containing CCPoint,
+        // which leaves its copy constructor/assignment deleted in C++23.
+        struct RawGameObjectPhysics {
+            alignas(GameObjectPhysics) std::array<std::byte, sizeof(GameObjectPhysics)> bytes;
+        };
+        std::unordered_map<int, RawGameObjectPhysics> m_gameObjectPhysics;
         #endif
     };
 

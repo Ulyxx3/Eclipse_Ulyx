@@ -1,5 +1,4 @@
 #include "manager.hpp"
-#include <filesystem>
 #include <asp/fs/fs.hpp>
 #include <modules/config/config.hpp>
 #include <modules/gui/imgui/imgui.hpp>
@@ -10,14 +9,14 @@
 namespace eclipse::gui {
     static auto IMPORT_PICK_OPTIONS = geode::utils::file::FilePickOptions{
         std::nullopt, {{
-            "Eclipse Themes",
+            "Eclipse Ulyx Themes",
             {"*.zip"}
         }}
     };
 
     int getDefaultThemeIndex(std::vector<ThemeMeta> const& themes) {
         #ifdef GEODE_IS_DESKTOP
-        static auto defaultPath = geode::Mod::get()->getResourcesDir() / "megaoverlay.json";
+        static auto defaultPath = geode::Mod::get()->getResourcesDir() / "eclipseulyx.json";
         #else
         static auto defaultPath = geode::Mod::get()->getResourcesDir() / "catppuccinmacchiato.json";
         #endif

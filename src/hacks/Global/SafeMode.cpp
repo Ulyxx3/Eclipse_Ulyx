@@ -304,7 +304,7 @@ namespace eclipse::hacks::Global {
         if (s_attemptCheats.empty() ) {
             popup = FLAlertLayer::create(
                 nullptr,
-                "Safe Mode (Eclipse)",
+                "Safe Mode (Eclipse Ulyx)",
                 "<cr>Progress saving is disabled.</c>\n\n"
                 "<cy>Safe Mode is enabled. Progress will NOT be saved for any attempts until you disable Safe Mode.</c>",
                 "OK", nullptr, 400, true, 0, 1
@@ -312,7 +312,7 @@ namespace eclipse::hacks::Global {
         } else {
             popup = FLAlertLayer::create(
                 nullptr,
-                "Safe Mode (Eclipse)",
+                "Safe Mode (Eclipse Ulyx)",
                 fmt::format(
                     "<cr>Progress saving is disabled.</c>\n\n"
                     "<cy>Safe Mode is enabled. Progress will NOT be saved for any attempts until you disable Safe Mode.</c>"
@@ -363,7 +363,7 @@ namespace eclipse::hacks::Global {
 
         auto popup = FLAlertLayer::create(
             nullptr,
-            "Auto-Safe Mode (Eclipse)",
+            "Auto-Safe Mode (Eclipse Ulyx)",
             fmt::format(
                 "<cr>Progress saving is disabled.</c>\n\n"
                 "<cy>Auto-Safe Mode is active because cheats are enabled.</c>\n"

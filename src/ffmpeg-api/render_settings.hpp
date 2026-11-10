@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <filesystem>
 
 #define FFMPEG_API_VERSION 2
 

@@ -1,37 +1,39 @@
-# Eclipse Menu
+# Eclipse Ulyx
 
-A **next-generation** mod menu for Geometry Dash.
+Personal fork of **Eclipse Menu** by **Ulyxx3**, updated for Geometry Dash 2.2091 and Geode v6.
 
 ## How to use
 
-1. On PC, press `TAB` to open and close the mod menu. For mobile, you should see a ball, click on that to open or close
+1. On PC, press `TAB` to open and close the mod menu. For mobile, you should see a floating button, tap it to open or close
    the menu!
 2. Set or toggle any hack / mod you want to use.
-3. For any questions or general support, join our [Support Discord Server](https://discord.gg/NnpwFRDMND)!
-4. Have fun using our mod!
+3. For questions or issues related to this fork, check the [Eclipse Ulyx Repository](https://github.com/Ulyxx3/Eclipse_Ulyx). For upstream Eclipse support, see the [Eclipse Discord Server](https://discord.gg/NnpwFRDMND).
+4. Have fun using the mod!
 
 ## Features
 
 - 100+ hacks
-- StartPos Switcher (with Smart SmartPos!)
+- StartPos Switcher (with Smart StartPos!)
 - Fully Customizable Labels
 - Show Trajectory
 - Internal Recorder
 - Replay Bot
 - Keybinds
-- Theme Customizability (you can theme Eclipse Menu however you want!)
+- Theme Customizability (you can theme Eclipse Ulyx however you want!)
 - Crossplatform support (Windows, macOS, Android, iOS)
 - Community Translations (check the [translations repository](https://github.com/EclipseMenu/translations) on how to
   contribute)
 - An API for other mods to interact with Eclipse
 
-Note: Internal Recorder requires FFmpeg API mod to be installed and enabled:
+Note: Internal Recorder requires FFmpeg API mod to be installed and enabled (when available for your Geode version):
 
 <mod:eclipse.ffmpeg-api>
 
 ## Credits
 
-This mod menu would not be possible without the developers from other mod menus teaming up together!
+This fork is maintained by **[Ulyxx3](https://github.com/Ulyxx3)** and is built upon **Eclipse Menu**.
+
+Eclipse Menu would not be possible without the developers from other mod menus teaming up together!
 
 - [ninXout](https://github.com/ninXout) ([Crystal Client](https://github.com/ninXout/Crystal-Client))
 - [prevter](https://github.com/Prevter) ([OpenHack](https://github.com/Prevter/OpenHack))

@@ -6,18 +6,17 @@
 		"android": "2.2091",
 		"ios": "2.2091"
 	},
-	"version": "v1.9.4",
-	"id": "eclipse.eclipse-menu",
-	"name": "Eclipse",
+	"version": "v1.9.4-ulyx.1",
+	"id": "ulyxx3.eclipse-ulyx",
+	"name": "Eclipse Ulyx",
 	"links": {
-		"homepage": "https://eclipse.menu",
-		"source": "https://github.com/EclipseMenu/EclipseMenu",
+		"source": "https://github.com/Ulyxx3/Eclipse_Ulyx",
 		"community": "https://discord.gg/NnpwFRDMND"
 	},
 	"api": { "include": [ "include/*.hpp" ] },
 	"tags": ["cheat", "gameplay", "utility", "customization", "interface"],
-	"developers": ["Eclipse Team", "ninXout", "prevter", "maxnu", "Firee", "SpaghettDev"],
-	"description": "A next-generation mod menu for Geometry Dash.",
+	"developers": ["Ulyxx3", "Eclipse Team", "ninXout", "prevter", "maxnu", "Firee", "SpaghettDev"],
+	"description": "Personal fork of Eclipse Menu for Geometry Dash, updated for Geode v6.",
 	"early-load": true,
 	"resources": {
 		"files": [

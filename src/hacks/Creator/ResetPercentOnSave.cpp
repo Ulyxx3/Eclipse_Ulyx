@@ -3,7 +3,7 @@
 #include <modules/gui/components/toggle.hpp>
 #include <modules/hack/hack.hpp>
 
-#include <Geode/modify/EditorPauseLayer.hpp>
+#include <Geode/modify/LevelEditorLayer.hpp>
 
 namespace eclipse::hacks::Creator {
     class $hack(ResetPercentOnSave) {
@@ -17,11 +17,11 @@ namespace eclipse::hacks::Creator {
 
     REGISTER_HACK(ResetPercentOnSave)
 
-    class $modify(ResetPercentEPLHook, EditorPauseLayer) {
+    class $modify(ResetPercentLELHook, LevelEditorLayer) {
         ADD_HOOKS_DELEGATE("creator.resetpercentonsave")
-        void saveLevel() {
-            if (m_editorLayer->m_level->m_levelType == GJLevelType::Editor) m_editorLayer->m_level->m_normalPercent = 0;
-            EditorPauseLayer::saveLevel();
+        bool saveLevel() {
+            if (m_level && m_level->m_levelType == GJLevelType::Editor) m_level->m_normalPercent = 0;
+            return LevelEditorLayer::saveLevel();
         }
     };
 }
